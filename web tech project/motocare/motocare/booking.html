@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Book a two-wheeler service appointment with MotoCare. Quick online scheduling for motorcycle, scooter, and electric vehicle repairs.">
+  <meta name="theme-color" content="#090d16">
+  <title>Book a Service – MotoCare Two-Wheeler Service &amp; Repair</title>
+
+  <!-- Google Fonts: Outfit & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="images/logo/favicon.svg">
+
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ========================================================================
+       1. Header & Navigation Bar
+       ======================================================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container">
+      <nav class="navbar" aria-label="Main Navigation">
+        <!-- Logo -->
+        <a href="index.html" class="brand-logo" title="MotoCare Home">
+          <img src="images/logo/logo.svg" alt="MotoCare Logo" width="180" height="42">
+        </a>
+
+        <!-- Desktop Navigation Menu -->
+        <ul class="nav-menu" id="primaryNavMenu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="booking.html" class="nav-link active">Book Service</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li class="mobile-cta">
+            <a href="booking.html" class="btn btn-primary btn-block">
+              <span>Book a Service</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+            </a>
+          </li>
+        </ul>
+
+        <!-- Navigation Actions -->
+        <div class="nav-actions">
+          <a href="booking.html" class="btn btn-primary btn-desktop">
+            <span>Book a Service</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+          </a>
+
+          <!-- Mobile Toggle Button -->
+          <button class="mobile-toggle" id="mobileMenuToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primaryNavMenu">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="mainContent">
+
+    <!-- ======================================================================
+         2. Booking Banner
+         ====================================================================== -->
+    <section class="section-padding" style="background: radial-gradient(circle at 50% 0%, rgba(255,94,20,0.12) 0%, transparent 60%); padding-bottom: 2rem;">
+      <div class="container">
+        <div class="section-header" style="margin-bottom: 2rem;">
+          <span class="section-badge">Fast Online Reservation</span>
+          <h1 class="section-title">Book Your <span class="text-gradient">Two-Wheeler Service</span></h1>
+          <p class="section-subtitle">
+            Schedule an appointment in under two minutes. Get instant service token confirmation and priority workshop bay allocation.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         3. Booking Form & Sidebar Section
+         ====================================================================== -->
+    <section class="section-padding" style="padding-top: 1rem;">
+      <div class="container">
+        <div class="booking-layout">
+          
+          <!-- Booking Form Card -->
+          <div class="form-card">
+            <h2 style="font-size: 1.65rem; margin-bottom: 0.5rem;">Service Booking Form</h2>
+            <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 2rem;">
+              Fill in your contact and two-wheeler details to secure your preferred slot.
+            </p>
+
+            <form id="serviceBookingForm" novalidate>
+              <div class="form-grid">
+                
+                <!-- 1. Customer Name -->
+                <div class="form-group">
+                  <label for="customerName" class="form-label">
+                    <span>Customer Name</span>
+                    <span class="required-dot">*</span>
+                  </label>
+                  <input type="text" id="customerName" name="customerName" class="form-input" placeholder="e.g. Ramesh Kumar" required autocomplete="name">
+                  <span class="error-text"></span>
+                </div>
+
+                <!-- 2. Mobile Number -->
+                <div class="form-group">
+                  <label for="customerPhone" class="form-label">
+                    <span>Mobile Number</span>
+                    <span class="required-dot">*</span>
+                  </label>
+                  <input type="tel" id="customerPhone" name="customerPhone" class="form-input" placeholder="10-digit number (e.g. 9876543210)" maxlength="10" required autocomplete="tel">
+                  <span class="error-text"></span>
+                </div>
+
+                <!-- 3. Email Address -->
+                <div class="form-group full-width">
+                  <label for="customerEmail" class="form-label">
+                    <span>Email Address</span>
+                    <span class="required-dot">*</span>
+                  </label>
+                  <input type="email" id="customerEmail" name="customerEmail" class="form-input" placeholder="e.g. ramesh@example.com" required autocomplete="email">
+                  <span class="error-text"></span>
+                </div>
+
+                <!-- 4. Vehicle Type -->
+                <div class="form-group">
+                  <label for="vehicleType" class="form-label">
+                    <span>Vehicle Type</span>
+                    <span class="required-dot">*</span>
+                  </label>
+                  <select id="vehicleType" name="vehicleType" class="form-select" required>
+                    <option value="" disabled selected>-- Select Vehicle Type --</option>
+                    <option value="Motorcycle">Motorcycle (Geared Bike)</option>
+                    <option value="Scooter">Scooter (Gearless / Moped)</option>
+                    <option value="Electric Two-Wheeler">Electric Two-Wheeler (EV)</option>
+                  </select>
+                  <span class="error-text"></span>
+                </div>
+
+                <!-- 5. Vehicle Brand -->
+                <div class="form-group">
+                  <label for="vehicleBrand" class="form-label">
+                    <span>Vehicle Brand</span>
+                    <span class="required-dot">*</span>
+                  </label>
+                  <select id="vehicleBrand" name="vehicleBrand" class="form-select" required>
+                    <option value="" disabled selected>-- Select Brand --</option>
+                    <option value="Honda">Honda</option>
+                    <option value="Yamaha">Yamaha</option>
+                    <option value="TVS">TVS</option>
+                    <option value="Bajaj">Bajaj</option>
+                    <option value="Hero">Hero</option>
+                    <option value="Royal Enfield">Royal Enfield</option>
+                    <option value="Suzuki">Suzuki</option>
+                    <option value="KTM">KTM</option>
+                    <option value="Ola">Ola Electric</option>
+                    <option value="Ather">Ather Energy</option>
+                    <option value="Other">Other Make</option>
+                  </select>
+                  <span class="error-text"></span>
+                </div>
+
+                <!-- 6. Vehicle Model -->
+                <div class="form-group">
+                  <label for="vehicleModel" class="form-label">
+                    <span>Vehicle Model</span>
+                    <span class="required-dot">*</span>
+                  </label>
+                  <input type="text" id="vehicleModel" name="vehicleModel" class="form-input" placeholder="e.g. Classic 350 / Activa 6G / Duke 250" required>
+                  <span class="error-text"></span>
+                </div>
+
+                <!-- 7. Registration Number -->
+                <div class="form-group">
+                  <label for="vehicleReg" class="form-label">
+                    <span>Registration Number</span>
+                    <span class="required-dot">*</span>
+                  </label>
+                  <input type="text" id="vehicleReg" name="vehicleReg" class="form-input" placeholder="e.g. TN-07-AB-1234" style="text-transform: uppercase;" required>
+                  <span class="error-text"></span>
+                </div>
+
+                <!-- 8. Service Required -->
+                <div class="form-group full-width">
+                  <label for="serviceRequired" class="form-label">
+                    <span>Service Required</span>
+                    <span class="required-dot">*</span>
+                  </label>
+                  <select id="serviceRequired" name="serviceRequired" class="form-select" required>
+                    <option value="" disabled selected>-- Select Required Service Package --</option>
+                    <option value="General Service">General Service (36-point inspection + foam wash) - ₹499</option>
+                    <option value="Engine Service">Engine Service &amp; Diagnostics - ₹1,199</option>
+                    <option value="Oil Change">Oil Change (Synthetic/Semi-Synthetic) - ₹299</option>
+                    <option value="Brake Service">Brake Service (Pad/Shoe replacement &amp; bleed) - ₹399</option>
+                    <option value="Battery Service">Battery Service &amp; Testing - ₹349</option>
+                    <option value="Electrical Repair">Electrical Repair &amp; Wiring Diagnosis - ₹449</option>
+                    <option value="Tyre Service">Tyre Service &amp; Wheel Truing - ₹199</option>
+                    <option value="EV Service">EV Service (Battery, Motor &amp; BMS scan) - ₹599</option>
+                    <option value="Other">Other Custom Repair / Diagnosis</option>
+                  </select>
+                  <span class="error-text"></span>
+                </div>
+
+                <!-- 9. Preferred Date -->
+                <div class="form-group">
+                  <label for="preferredDate" class="form-label">
+                    <span>Preferred Date</span>
+                    <span class="required-dot">*</span>
+                  </label>
+                  <input type="date" id="preferredDate" name="preferredDate" class="form-input" required>
+                  <span class="error-text"></span>
+                </div>
+
+                <!-- 10. Preferred Time Slot -->
+                <div class="form-group">
+                  <label for="preferredTime" class="form-label">
+                    <span>Preferred Time Slot</span>
+                    <span class="required-dot">*</span>
+                  </label>
+                  <select id="preferredTime" name="preferredTime" class="form-select" required>
+                    <option value="" disabled selected>-- Choose Time Slot --</option>
+                    <option value="08:00 AM - 10:00 AM">Morning Early Slot: 08:00 AM - 10:00 AM</option>
+                    <option value="10:00 AM - 01:00 PM">Morning Peak Slot: 10:00 AM - 01:00 PM</option>
+                    <option value="02:00 PM - 04:00 PM">Afternoon Slot: 02:00 PM - 04:00 PM</option>
+                    <option value="04:00 PM - 07:00 PM">Evening Slot: 04:00 PM - 07:00 PM</option>
+                  </select>
+                  <span class="error-text"></span>
+                </div>
+
+                <!-- 11. Additional Problem / Description -->
+                <div class="form-group full-width">
+                  <label for="problemDescription" class="form-label">
+                    <span>Additional Problem / Symptoms (Optional)</span>
+                  </label>
+                  <textarea id="problemDescription" name="problemDescription" class="form-textarea" placeholder="Describe any strange noises, vibrations, starting troubles, oil leaks, or specific instructions for our mechanics..."></textarea>
+                  <span class="error-text"></span>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="form-group full-width" style="margin-top: 1rem;">
+                  <button type="submit" class="btn btn-primary btn-lg btn-block" id="btnSubmitBooking">
+                    <span>Confirm &amp; Generate Service Token</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                  </button>
+                  <p style="text-align: center; font-size: 0.8rem; color: var(--text-dim); margin-top: 0.75rem;">
+                    * No advance payment required online. Pay after vehicle inspection and road test.
+                  </p>
+                </div>
+
+              </div>
+            </form>
+          </div>
+
+          <!-- Sidebar Information Card -->
+          <aside class="booking-sidebar">
+            <div class="booking-sidebar-card">
+              <h3>
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                <span>Drop-off Guidelines</span>
+              </h3>
+              <div class="info-list">
+                <div class="info-list-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <div>
+                    <strong>Punctual Drop-off:</strong> Please arrive within 15 minutes of your booked slot for priority inspection.
+                  </div>
+                </div>
+                <div class="info-list-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <div>
+                    <strong>Remove Belongings:</strong> Kindly remove valuable items or documents from under-seat storage.
+                  </div>
+                </div>
+                <div class="info-list-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <div>
+                    <strong>Transparent Estimate:</strong> Our mechanic calls you with an itemized estimate before replacing any parts.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Free Pickup Banner -->
+            <div class="booking-sidebar-card" style="border-color: rgba(16,185,129,0.3); background: linear-gradient(145deg, #0d201e, var(--bg-surface));">
+              <h3 style="color: var(--color-green);">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+                <span>Doorstep Pickup &amp; Drop</span>
+              </h3>
+              <p style="font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 1rem; line-height: 1.6;">
+                Too busy to visit our garage? We offer doorstep pickup and drop within a 10 km radius for all scheduled general services.
+              </p>
+              <div style="font-size: 0.85rem; color: var(--color-green); font-weight: 600;">
+                Call: +91 98765 43210 to request pickup.
+              </div>
+            </div>
+
+            <!-- Need Emergency Help -->
+            <div class="booking-sidebar-card" style="border-color: rgba(239,68,68,0.3);">
+              <h3 style="color: #f87171;">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+                <span>Roadside Breakdown?</span>
+              </h3>
+              <p style="font-size: 0.875rem; color: var(--text-muted); margin-bottom: 0.75rem;">
+                Flat tyre, broken chain, or engine stall on the road?
+              </p>
+              <a href="contact.html#emergency" class="btn btn-outline btn-sm btn-block" style="border-color: #ef4444; color: #f87171;">
+                Roadside Assistance Support
+              </a>
+            </div>
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================================
+       4. Booking Confirmation Modal (Stage 1 Interactive Simulation)
+       ======================================================================== -->
+  <div class="modal-overlay" id="bookingSuccessModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-dialog">
+      <!-- Close icon button -->
+      <button class="modal-close-btn js-close-modal" aria-label="Close confirmation dialog">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+
+      <!-- Success Check Icon -->
+      <div class="modal-icon-success">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="20 6 9 17 4 12"></polyline>
+        </svg>
+      </div>
+
+      <h2 class="modal-title" id="modalTitle">Booking Submitted Successfully!</h2>
+      <p class="modal-subtitle">Our service team will contact you shortly to confirm your slot.</p>
+
+      <!-- Highlighted Service Token -->
+      <div class="token-highlight-box">
+        <div class="token-label">Your Generated Service ID</div>
+        <div class="token-code" id="modalServiceId">MC-2026-1045</div>
+        <p style="font-size: 0.775rem; color: var(--text-dim); margin-top: 0.25rem;">
+          Keep this service token handy for vehicle drop-off and status inquiry.
+        </p>
+      </div>
+
+      <!-- Itemized Booking Summary -->
+      <div class="booking-summary-list" id="modalSummaryContent">
+        <!-- Dynamically injected via js/script.js -->
+      </div>
+
+      <!-- Modal Actions -->
+      <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+        <button type="button" class="btn btn-secondary" id="btnCopyServiceId" style="flex: 1;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+          <span>Copy ID</span>
+        </button>
+        <button type="button" class="btn btn-outline" id="btnPrintReceipt" style="flex: 1;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+          <span>Print Slip</span>
+        </button>
+        <button type="button" class="btn btn-primary js-close-modal" style="width: 100%;">
+          <span>Done / Close</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       5. Footer
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo" title="MotoCare Home">
+            <img src="images/logo/logo.svg" alt="MotoCare Logo" width="180" height="42">
+          </a>
+          <p>
+            <strong>Your Ride. Our Responsibility.</strong><br>
+            MotoCare is a multi-brand two-wheeler workshop providing authorized-level mechanical overhauls, routine service, and electric vehicle diagnostics.
+          </p>
+          <div class="social-links" aria-label="Social Media Links">
+            <a href="#" class="social-link" title="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+            <a href="#" class="social-link" title="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path></svg></a>
+            <a href="#" class="social-link" title="Twitter"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About MotoCare</a></li>
+            <li><a href="services.html">Services Catalog</a></li>
+            <li><a href="booking.html">Book an Appointment</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Popular Services</h4>
+          <ul class="footer-links">
+            <li><a href="services.html#general">General Bike Service</a></li>
+            <li><a href="services.html#mechanical">Engine Overhaul</a></li>
+            <li><a href="services.html#general">Full Synthetic Oil Change</a></li>
+            <li><a href="services.html#mechanical">Brake &amp; Disc Caliper</a></li>
+            <li><a href="services.html#ev">EV Battery Diagnostic</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Working Hours</h4>
+          <table class="hours-table">
+            <tbody>
+              <tr><td>Monday – Saturday:</td><td>8:00 AM – 8:00 PM</td></tr>
+              <tr><td>Sunday:</td><td>9:00 AM – 2:00 PM</td></tr>
+              <tr><td>Breakdown Help:</td><td><span class="text-orange">24 / 7 Available</span></td></tr>
+            </tbody>
+          </table>
+          <div style="margin-top: 1.5rem; font-size: 0.875rem; color: var(--text-muted);">
+            <p><strong>Hotline:</strong> +91 98765 43210</p>
+            <p><strong>Support:</strong> support@motocare.com</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span class="current-year">2026</span> MotoCare. All rights reserved. Industrial College Project (Stage 1).</p>
+        <p>Built with Clean HTML5, CSS3 &amp; Vanilla JavaScript</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

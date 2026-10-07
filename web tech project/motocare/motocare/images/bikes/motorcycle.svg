@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" fill="none">
+  <defs>
+    <linearGradient id="motoGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FF6B35"/>
+      <stop offset="100%" stop-color="#D84315"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="240" rx="16" fill="#131B2A"/>
+  <!-- Ground line -->
+  <line x1="30" y1="200" x2="370" y2="200" stroke="#334155" stroke-width="3" stroke-linecap="round"/>
+  <!-- Rear Wheel -->
+  <circle cx="100" cy="165" r="35" stroke="#94A3B8" stroke-width="8" fill="#1E293B"/>
+  <circle cx="100" cy="165" r="14" fill="#64748B"/>
+  <!-- Front Wheel -->
+  <circle cx="300" cy="165" r="35" stroke="#94A3B8" stroke-width="8" fill="#1E293B"/>
+  <circle cx="300" cy="165" r="14" fill="#64748B"/>
+  <!-- Frame & Engine -->
+  <path d="M100 165 L170 165 L215 125 L160 120 Z" fill="#334155"/>
+  <!-- Engine block -->
+  <rect x="155" y="135" width="45" height="35" rx="6" fill="#475569"/>
+  <line x1="160" y1="145" x2="195" y2="145" stroke="#64748B" stroke-width="2"/>
+  <line x1="160" y1="155" x2="195" y2="155" stroke="#64748B" stroke-width="2"/>
+  <!-- Fuel Tank & Body in Orange -->
+  <path d="M150 115 C170 95 210 95 235 110 L255 115 L220 135 L160 130 Z" fill="url(#motoGrad)"/>
+  <!-- Seat -->
+  <path d="M125 118 C140 115 165 115 180 122 L170 130 L130 130 Z" fill="#0F172A"/>
+  <!-- Front Fork & Handlebars -->
+  <line x1="300" y1="165" x2="250" y2="85" stroke="#CBD5E1" stroke-width="6" stroke-linecap="round"/>
+  <line x1="240" y1="85" x2="265" y2="85" stroke="#E2E8F0" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="270" cy="98" r="7" fill="#FACC15"/> <!-- Headlight -->
+  <!-- Exhaust Pipe -->
+  <path d="M185 165 L220 175 L120 178" stroke="#94A3B8" stroke-width="4" fill="none" stroke-linecap="round"/>
+</svg>

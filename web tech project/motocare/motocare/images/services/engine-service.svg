@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <defs>
+    <linearGradient id="srvEngGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#0284C7"/>
+    </linearGradient>
+  </defs>
+  <rect width="200" height="200" rx="16" fill="#141D2E"/>
+  <circle cx="100" cy="100" r="65" fill="#1A263B" stroke="url(#srvEngGrad)" stroke-width="2"/>
+  <rect x="75" y="70" width="50" height="40" rx="6" fill="url(#srvEngGrad)"/>
+  <path d="M85 110 L100 135 L115 110 Z" fill="#64748B"/>
+  <circle cx="100" cy="90" r="8" fill="#FFFFFF"/>
+</svg>
